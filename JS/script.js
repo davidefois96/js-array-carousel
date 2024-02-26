@@ -17,19 +17,12 @@ const images = [
   '../assets/img/05.webp',
 ]
 
-const newCont = images.length;
-
-console.log(newCont);
 
 
 for (let i = 0; i < images.length; i++) {
-   
   
- 
   imgWrapper.innerHTML += ` <img class="d-none img" src=" ${images[i]}"> `;
 
-
-  
 }
 
 const imgCollection= document.getElementsByClassName('img');
@@ -39,14 +32,8 @@ imgCollection[contImg].classList.remove('d-none');
 
 up.addEventListener('click', function() {
 
-  down.classList.remove('d-none');
-
   imgCollection[contImg].classList.add('d-none');
 
-  
-
-  
- 
 
   if(contImg===0){
      
@@ -68,7 +55,7 @@ up.addEventListener('click', function() {
 })
 down.addEventListener('click', function() {
 
-  up.classList.remove('d-none');
+  
 
   imgCollection[contImg].classList.add('d-none');
 
@@ -79,9 +66,7 @@ down.addEventListener('click', function() {
   if(contImg===images.length-1){
     
     contImg=0;
-
-
-    
+ 
   } else {
 
     contImg++;
