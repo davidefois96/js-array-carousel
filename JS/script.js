@@ -43,22 +43,25 @@ up.addEventListener('click', function() {
 
   imgCollection[contImg].classList.add('d-none');
 
-  contImg--;
+  
 
   
-  imgCollection[contImg].classList.remove('d-none');
+ 
 
   if(contImg===0){
      
-    contImg = newCont;
+    contImg = images.length-1 ;
    
-
     
+  } else {
+
+    contImg--;
 
 
   }
 
-  console.log(contImg);
+  imgCollection[contImg].classList.remove('d-none');
+  
 
 
 
@@ -69,16 +72,24 @@ down.addEventListener('click', function() {
 
   imgCollection[contImg].classList.add('d-none');
 
-  contImg++;
+  
 
   
-  imgCollection[contImg].classList.remove('d-none');
-
+  
   if(contImg===images.length-1){
-    down.classList.add('d-none');
+    
+    contImg=0;
+
+
+    
+  } else {
+
+    contImg++;
+
 
 
   }
+  imgCollection[contImg].classList.remove('d-none');
 
 
 
