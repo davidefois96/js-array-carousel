@@ -3,7 +3,7 @@ const imgWrapper = document.querySelector('.imgWrapper');
 const up= document.querySelector('.up');
 const down= document.querySelector('.down');
 
-up.classList.add('d-none');
+
 
 let contImg= 0;
 
@@ -16,7 +16,11 @@ const images = [
   '../assets/img/04.webp',
   '../assets/img/05.webp',
 ]
-console.log(images);
+
+const newCont = images.length;
+
+console.log(newCont);
+
 
 for (let i = 0; i < images.length; i++) {
    
@@ -45,10 +49,16 @@ up.addEventListener('click', function() {
   imgCollection[contImg].classList.remove('d-none');
 
   if(contImg===0){
-    up.classList.add('d-none');
+     
+    contImg = newCont;
+   
+
+    
 
 
   }
+
+  console.log(contImg);
 
 
 
