@@ -2,12 +2,7 @@
 const imgWrapper = document.querySelector('.imgWrapper');
 const up= document.querySelector('.up');
 const down= document.querySelector('.down');
-
-
-
 let contImg= 0;
-
-
 
 const images = [
   '../assets/img/01.webp',
@@ -16,7 +11,6 @@ const images = [
   '../assets/img/04.webp',
   '../assets/img/05.webp',
 ]
-
 
 
 for (let i = 0; i < images.length; i++) {
@@ -48,20 +42,14 @@ up.addEventListener('click', function() {
   }
 
   imgCollection[contImg].classList.remove('d-none');
-  
-
-
+ 
 
 })
 down.addEventListener('click', function() {
 
-  
 
   imgCollection[contImg].classList.add('d-none');
 
-  
-
-  
   
   if(contImg===images.length-1){
     
@@ -71,11 +59,8 @@ down.addEventListener('click', function() {
 
     contImg++;
 
-
-
   }
   imgCollection[contImg].classList.remove('d-none');
-
 
 
 })
